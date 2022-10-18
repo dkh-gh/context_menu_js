@@ -12,28 +12,28 @@
 		document.addEventListener('DOMContentLoaded', function() {
 
 			let context_menu1 = new ContextMenu([
-					{'name': 'alert', function() {
+					{'name': 'alert', 'function': function() {
 						alert('hello');
 					}},
-					{'name': 'console.log', function() {
+					{'name': 'console.log', 'function': function() {
 						console.log('hello');
 					}},
-					{'name': 'link: GitHub', function() {
+					{'name': 'link: GitHub', 'function': function() {
 						window.location = 'http://github.com';
 					}},
 				], document.querySelector('#block1'));
 			
 			let context_menu2 = new ContextMenu([
-					{'name': 'GiroBot', function() {
+					{'name': 'GiroBot', 'function': function() {
 						window.location = 'https://github.com/dkh-gh/girobot';
 					}},
-					{'name': 'JS Circles', function() {
+					{'name': 'JS Circles', 'function': function() {
 						window.location = 'https://github.com/dkh-gh/js_circles';
 					}},
-					{'name': 'Web Interface', function() {
+					{'name': 'Web Interface', 'function': function() {
 						window.location = 'https://github.com/dkh-gh/webinterface';
 					}},
-					{'name': 'Python Pixels', function() {
+					{'name': 'Python Pixels', 'function': function() {
 						window.location = 'https://github.com/dkh-gh/dkh_pixel';
 					}},
 				], document.querySelector('#block2'));
