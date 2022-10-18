@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Context Menu JS - example</title>
+
+	<script src="context_menu.js"></script>
+	<link rel="stylesheet" href="context_menu.css">
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+
+			let context_menu1 = new ContextMenu([
+					{'name': 'alert', function() {
+						alert('hello');
+					}},
+					{'name': 'console.log', function() {
+						console.log('hello');
+					}},
+					{'name': 'link: GitHub', function() {
+						window.location = 'http://github.com';
+					}},
+				], document.querySelector('#block1'));
+			
+			let context_menu2 = new ContextMenu([
+					{'name': 'GiroBot', function() {
+						window.location = 'https://github.com/dkh-gh/girobot';
+					}},
+					{'name': 'JS Circles', function() {
+						window.location = 'https://github.com/dkh-gh/js_circles';
+					}},
+					{'name': 'Web Interface', function() {
+						window.location = 'https://github.com/dkh-gh/webinterface';
+					}},
+					{'name': 'Python Pixels', function() {
+						window.location = 'https://github.com/dkh-gh/dkh_pixel';
+					}},
+				], document.querySelector('#block2'));
+
+		});
+	</script>
+</head>
+<body>
+	<div id="block1" style="
+		position: fixed;
+		left: 0; top: 0;
+		width: 50%; height: 100%;
+		background: #222;"></div>
+	<div id="block2" style="
+		position: fixed;
+		left: 50%; top: 0;
+		width: 50%; height: 50%;
+		background: #555;"></div>
+</body>
+</html>
