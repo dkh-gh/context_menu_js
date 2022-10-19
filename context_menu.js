@@ -1,5 +1,10 @@
 
-//version 1.0
+/* 
+ * Context Menu for web pages
+ * Author: Kholostov Dmitry
+ * version 1.1
+ * github: https://github.com/dkh-gh/context_menu_js
+ */
 
 class ContextMenu {
 
